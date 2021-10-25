@@ -143,7 +143,7 @@ p {
 #header .nav-list ul li:hover a {
 	color: lightseagreen;
 }
-#header .toplist {
+#header .hamburger {
 	height: 60px;
 	width: 60px;
 	display: inline-block;
@@ -158,24 +158,24 @@ p {
 	transform: scale(0.8);
 	margin-right: 20px;
 }
-#header .toplist:after {
+#header .hamburger:after {
 	position: absolute;
 	content: '';
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
 	border: 3px solid white;
-	animation: toplist_puls 1s ease infinite;
+	animation: hamburger_puls 1s ease infinite;
 }
-#header .toplist .bar {
+#header .hamburger .bar {
 	height: 2px;
 	width: 30px;
 	position: relative;
 	background-color: white;
 	z-index: -1;
 }
-#header .toplist .bar::after,
-#header .toplist .bar::before {
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
 	content: '';
 	position: absolute;
 	height: 100%;
@@ -185,16 +185,16 @@ p {
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
-#header .toplist .bar::after {
+#header .hamburger .bar::after {
 	top: 8px;
 }
-#header .toplist .bar::before {
+#header .hamburger .bar::before {
 	bottom: 8px;
 }
-#header .toplist.active .bar::before {
+#header .hamburger.active .bar::before {
 	bottom: 0;
 }
-#header .toplist.active .bar::after {
+#header .hamburger.active .bar::after {
 	top: 0;
 }
 /* End Header section */
@@ -385,7 +385,7 @@ p {
 
 
 /* Keyframes */
-@keyframes toplist_puls {
+@keyframes hamburger_puls {
 	0% {
 		opacity: 1;
 		transform: scale(1);
@@ -510,7 +510,7 @@ p {
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
 	/* header */
-	#header .toplist {
+	#header .hamburger {
 		display: none;
 	}
 	#header .nav-list ul {
